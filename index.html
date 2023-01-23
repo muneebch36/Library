@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>
+        &#129419; &#9729;&#65039; &#127752;Library&#129419; &#9729;&#65039;
+        &#127752;
+      </h1>
+    </div>
+
+    <div class="library">
+      <button class="add-book-button">Add Book</button>
+      <form id="add-book-form" onsubmit="submitForm()" target="_self">
+        <input id="new-title" placeholder="title?" type="text" />
+        <input id="new-author" placeholder="author?" type="text" />
+        <input id="new-pages" placeholder="pages?" type="text" />
+        <input id="new-read" placeholder="read?" type="text" />
+      </form>
+    </div>
+
+    <div class="book">
+      <div class="name">Harry Potter</div>
+      <div class="author">J.K. Rowling</div>
+      <div class="pages">426</div>
+      <button class="read"></button>
+      <button class="delete"></button>
+    </div>
+
+    <div class="footer">&#127855;</div>
+  </body>
+</html>

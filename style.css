@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: white;
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+button {
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+}
+
+form {
+  width: 200px;
+  height: 200px;
+  background-color: gray;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: lightskyblue;
+  padding: 10px;
+  box-shadow: var(--box-shadow);
+  width: 200px;
+  height: 200px;
+}
