@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>LIBRARY</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📘</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -13,26 +21,102 @@
         &#129419; &#9729;&#65039; &#127752;Library&#129419; &#9729;&#65039;
         &#127752;
       </h1>
+      <button class="add-book-button">+</button>
     </div>
 
-    <div class="library">
-      <button class="add-book-button">Add Book</button>
-      <form id="add-book-form" onsubmit="submitForm()" target="_self">
+  
+     
+   <!--    <form
+        id="add-book-form"
+        onsubmit="event.preventDefault();submitForm();"
+        target="_self"
+      >
         <input id="new-title" placeholder="title?" type="text" />
         <input id="new-author" placeholder="author?" type="text" />
         <input id="new-pages" placeholder="pages?" type="text" />
         <input id="new-read" placeholder="read?" type="text" />
-      </form>
+        <input type="submit" value="Submit" />
+      </form> -->
+
+    <div class="library">
+      <div class="book">
+        <img src="book.png" alt="book" />
+        <div class="book-text">
+          <div class="name">Harry Potter</div>
+          <div class="author">J.K. Rowling</div>
+          <div class="pages">426 pgs</div>
+        </div>
+        <div class="book-status">
+          <span class="read">100%</span>
+          <span class="material-symbols-outlined">Delete</span>
+        </div>
+      </div>
+      <div class="book">
+        <img src="book.png" alt="book" />
+        <div class="book-text">
+          <div class="name">Harry Potter</div>
+          <div class="author">J.K. Rowling</div>
+          <div class="pages">426 pgs</div>
+        </div>
+        <div class="book-status">
+          <span class="read">100%</span>
+          <span class="material-symbols-outlined">Delete</span>
+        </div>
+      </div>
+      <div class="book">
+        <img src="book.png" alt="book" />
+        <div class="book-text">
+          <div class="name">Harry Potter</div>
+          <div class="author">J.K. Rowling</div>
+          <div class="pages">426 pgs</div>
+        </div>
+        <div class="book-status">
+          <span class="read">100%</span>
+          <span class="material-symbols-outlined">Delete</span>
+        </div>
+      </div>
+      <div class="book">
+        <img src="book.png" alt="book" />
+        <div class="book-text">
+          <div class="name">Harry Potter</div>
+          <div class="author">J.K. Rowling</div>
+          <div class="pages">426 pgs</div>
+        </div>
+        <div class="book-status">
+          <span class="read">100%</span>
+          <span class="material-symbols-outlined">Delete</span>
+        </div>
+      </div>
+      <div class="book">
+        <img src="book.png" alt="book" />
+        <div class="book-text">
+          <div class="name">Harry Potter</div>
+          <div class="author">J.K. Rowling</div>
+          <div class="pages">426 pgs</div>
+        </div>
+        <div class="book-status">
+          <span class="read">100%</span>
+          <span class="material-symbols-outlined">Delete</span>
+        </div>
+      </div>
+      <div class="book">
+        <img src="book.png" alt="book" />
+        <div class="book-text">
+          <div class="name">Harry Potter</div>
+          <div class="author">J.K. Rowling</div>
+          <div class="pages">426 pgs</div>
+        </div>
+        <div class="book-status">
+          <span class="read">100%</span>
+          <span class="material-symbols-outlined">Delete</span>
+        </div>
+      </div>
+     
+        </div>
+      </div>
     </div>
 
-    <div class="book">
-      <div class="name">Harry Potter</div>
-      <div class="author">J.K. Rowling</div>
-      <div class="pages">426</div>
-      <button class="read"></button>
-      <button class="delete"></button>
-    </div>
-
-    <div class="footer">&#127855;</div>
+    <footer><h1>&#127855;</h1></footer>
   </body>
+  <script src="script.js"></script>
 </html>

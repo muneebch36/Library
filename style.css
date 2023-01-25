@@ -8,35 +8,89 @@
 }
 
 body {
-  background-color: black;
+  background-color: #0378d8;
+}
+
+:root {
+  --box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 button {
-  background-color: #000000;
+  background-color: #08368d;
   border: none;
   color: white;
-  padding: 10px 22px;
+  padding: 1px 10px;
   text-align: center;
   text-decoration: none;
-  border-radius: 5px;
-  font-size: 16px;
+  border-radius: 50%;
+  font-size: 32px;
   cursor: pointer;
   box-shadow: var(--box-shadow);
+  position: fixed;
+  margin-top: 4px;
+  margin-left: 90%;
 }
 
 form {
   width: 200px;
   height: 200px;
-  background-color: gray;
+  background-color: rgb(4, 55, 65);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #0378d8;
+  height: 20%;
+}
+
+.library {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #0378d8;
+  gap: 10px;
+  padding: 10px;
 }
 
 .book {
   display: flex;
   flex-direction: column;
-  border-radius: 5px;
-  background-color: lightskyblue;
-  padding: 10px;
-  box-shadow: var(--box-shadow);
-  width: 200px;
-  height: 200px;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: min-content;
+  height: min-content;
+}
+
+.book-text {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  position: absolute;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.book-status {
+  display: flex;
+  align-items: center;
+  gap: 160px;
+}
+
+.book-status > * {
+  cursor: pointer;
+}
+
+footer {
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  text-align: right;
+  background-color: transparent;
 }

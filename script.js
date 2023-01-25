@@ -1,35 +1,29 @@
-
 let myLibrary = [];
-let newTitle= "";
-let newAuthor= "";
-let newPages= "";
-let newRead= "";
+ const newTitle= document.getElementById("new-title");
+ const newAuthor= document.getElementById("new-author");
+ const newPages= document.getElementById("new-pages");
+ const newRead= document.getElementById("new-read");
 
-function Book(title,author,pages,read) {
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.read = read
-    this.add = function() {
-        return myLibrary.push(title,author,pages,read);
-      }
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
     }
+}
+
 
     function addBookToLibrary() {
-        const newBook = new Book(newTitle,newAuthor,newPages,newRead);
-        newBook.add;
+        
       }
 
-function submitForm(event) {
-    event.preventDefault();
-    newTitle= document.getElementById("new-title").value;
-    newAuthor= document.getElementById("new-author").value;
-    newPages= document.getElementById("new-pages").value;
-    newRead= document.getElementById("new-read").value;
-    addBookToLibrary();
+function submitForm() {
+    myLibrary.push(new Book(newTitle.value,newAuthor.value,newPages.value,newRead.value));
   }
 
+ 
+ 
 
 
-/* EighthGrader.prototype = Object.create(Student.prototype) */
 
