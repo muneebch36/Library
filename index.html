@@ -21,36 +21,41 @@
         &#129419; &#9729;&#65039; &#127752;Library&#129419; &#9729;&#65039;
         &#127752;
       </h1>
-      <button class="add-book-button">+</button>
+      <button class="add-button" id="add">+</button>
     </div>
 
   
      
-   <!--    <form
-        id="add-book-form"
+     
+      <div class="new-modal" id="modal">
+        <form
+        class="modal-content"
         onsubmit="event.preventDefault();submitForm();"
-        target="_self"
-      >
-        <input id="new-title" placeholder="title?" type="text" />
-        <input id="new-author" placeholder="author?" type="text" />
-        <input id="new-pages" placeholder="pages?" type="text" />
-        <input id="new-read" placeholder="read?" type="text" />
-        <input type="submit" value="Submit" />
-      </form> -->
+        target="_self">
+         
+          <div>
+           
+            <label for="new-title">Title</label>
+            <input id="new-title" name="new-title" type="text" />
+          </div>
+          <div>
+            <label for="new-title">Author</label>
+            <input id="new-author" name="new-author" type="text" />
+          </div>
+          <div>
+            <label for="new-title">Total Pages</label>
+            <input id="new-pages" name="new-pages" type="number" />
+          </div>
+          <div>
+            <label for="new-title">Pages Read</label>
+            <input id="read-pages" name="read-pages" type="number" />
+          </div> 
+          <input id="add-new" type="submit" value="Add new book" />
+        </form>
+      </div>
+  
 
     <div class="library">
-      <div class="book">
-        <img src="book.png" alt="book" />
-        <div class="book-text">
-          <div class="name">Harry Potter</div>
-          <div class="author">J.K. Rowling</div>
-          <div class="pages">426 pgs</div>
-        </div>
-        <div class="book-status">
-          <span class="read">100%</span>
-          <span class="material-symbols-outlined">Delete</span>
-        </div>
-      </div>
       <div class="book">
         <img src="book.png" alt="book" />
         <div class="book-text">
