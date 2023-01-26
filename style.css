@@ -50,6 +50,23 @@ input {
   color: white;
 }
 
+.close {
+  position: absolute;
+  top: 1px;
+  right: 10px;
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+  align-self: right;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 #modal {
   display: none;
   position: fixed;
@@ -63,12 +80,13 @@ input {
   backdrop-filter: blur(2px);
 }
 
-#add-new {
+#submit-form {
   margin-top: 10px;
   width: 50%;
+  font-size: 14px;
 }
 
-.modal-content {
+form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,6 +99,7 @@ input {
   height: auto;
   border-radius: 10px;
   gap: 10px;
+  position: relative;
 }
 
 .modal-content > label {

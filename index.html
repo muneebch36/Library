@@ -24,45 +24,37 @@
       <button class="add-button" id="add">+</button>
     </div>
 
-  
-     
-     
-      <div class="new-modal" id="modal">
-        <form
-        class="modal-content"
-        onsubmit="event.preventDefault();submitForm();"
-        target="_self">
-         
+      <div class="pop-up" id="modal">
+        <form class="modal-content" id="book-form" target="_self">
+        <span class="close">&times;</span>
           <div>
-           
-            <label for="new-title">Title</label>
-            <input id="new-title" name="new-title" type="text" />
+            <label for="title">Title</label>
+            <input id="title" name="title" type="text" />
           </div>
           <div>
-            <label for="new-title">Author</label>
-            <input id="new-author" name="new-author" type="text" />
+            <label for="author">Author</label>
+            <input id="author" name="author" type="text" />
           </div>
           <div>
-            <label for="new-title">Total Pages</label>
-            <input id="new-pages" name="new-pages" type="number" />
+            <label for="pages">Total Pages</label>
+            <input id="pages" name="pages" type="number" />
           </div>
           <div>
-            <label for="new-title">Pages Read</label>
-            <input id="read-pages" name="read-pages" type="number" />
+            <label for="read">Pages Read</label>
+            <input id="read" name="read" type="number" />
           </div> 
-          <input id="add-new" type="submit" value="Add new book" />
+          <input id="submit-form" type="submit" value="Add new book" />
         </form>
       </div>
-  
 
-    <div class="library">
+    <div class="library" id="book-shelf">
       <div class="book">
-        <img src="book.png" alt="book" />
         <div class="book-text">
           <div class="name">Harry Potter</div>
           <div class="author">J.K. Rowling</div>
           <div class="pages">426 pgs</div>
         </div>
+        <img src="book.png" alt="book" />
         <div class="book-status">
           <span class="read">100%</span>
           <span class="material-symbols-outlined">Delete</span>
@@ -116,12 +108,12 @@
           <span class="material-symbols-outlined">Delete</span>
         </div>
       </div>
-     
         </div>
       </div>
     </div>
 
     <footer><h1>&#127855;</h1></footer>
+
   </body>
   <script src="script.js"></script>
 </html>
