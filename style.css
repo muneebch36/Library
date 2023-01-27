@@ -130,6 +130,7 @@ form {
   background-color: transparent;
   width: min-content;
   height: min-content;
+  padding-left: 35px;
 }
 
 .book-text {
@@ -141,14 +142,14 @@ form {
 }
 
 img {
-  width: 100%;
-  height: auto;
+  width: 250px;
+  height: 350px;
 }
 
 .book-status {
   display: flex;
   align-items: center;
-  gap: 160px;
+  gap: 180px;
 }
 
 .book-status > :nth-child(2) {

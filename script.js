@@ -1,5 +1,7 @@
-let myLibrary = [];
+const myLibrary = [];
+
 let saved = [];
+let key = 0;
 const modal = document.getElementById("modal");
 const addButton = document.getElementById("add");
 const submitForm = document.getElementById("submit-form");
@@ -20,23 +22,34 @@ myLibrary.prototype = Object.create(Book.prototype);
 
 function addBookToLibrary() {
     myLibrary.push(new Book(saved['title'],saved['author'],saved['pages'],saved['read']));
+    createBook(key)
+    key++;
 }
 
 function deleteBook(key) {
-    myLibrary.filter(val => !val.hasOwnProperty[key]);
+    delete myLibrary(key)
   }
 
+  function readPercentage(key) {
+    let x = (100 * +(myLibrary[key].read)) / +(myLibrary[key].pages)
+    return Math.round(x);
+ } 
+  
 function createBook(key) {
-  const book = document.createElement("div");
-  const bookChild = book.appendChild(book);
-  bookShelf.appendChild(book).className = "book";
-  book.appendChild(book).className = "book-text";
-  bookText.appendChild(book).className = "name";
-  bookText.appendChild(book).className = "author";
-  bookText.appendChild(book).className = "pages";
-  elementInsideDiv.insertAdjacentHTML('afterbegin', myLibrary[key].title);
-
-
+  bookShelf.insertAdjacentHTML('afterbegin', `
+  <div class="book">
+  <img src="book.png" alt="book" />
+  <div class="book-text">
+    <div class="name">${myLibrary[key].title}</div>
+    <div class="author">${myLibrary[key].author}</div>
+    <div class="pages">${myLibrary[key].pages} pgs</div>
+  </div>
+  <div class="book-status">
+    <span class="read">${readPercentage(key)}%</span>
+    <span class="material-symbols-outlined">Delete</span>
+  </div>
+</div>`
+  );
 }
 
  
