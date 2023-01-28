@@ -8,6 +8,11 @@ const submitForm = document.getElementById("submit-form");
 const bookShelf = document.getElementById("book-shelf");
 const closeButton = document.getElementsByClassName("close")[0];
 const form = document.querySelector("form");
+const deleteButton = document.querySelectorAll(".material-symbols-outlined");
+
+let x="";
+let y="";
+let parentDiv = "";
 
 class Book {
     constructor(title, author, pages, read) {
@@ -21,7 +26,7 @@ class Book {
 myLibrary.prototype = Object.create(Book.prototype);
 
 function addBookToLibrary() {
-    myLibrary.push(new Book(saved['title'],saved['author'],saved['pages'],saved['read']));
+    myLibrary.push(new Book(saved.title,saved.author,saved.pages,saved.read));
     createBook(key)
     key++;
 }
@@ -37,8 +42,8 @@ function deleteBook(key) {
   
 function createBook(key) {
   bookShelf.insertAdjacentHTML('afterbegin', `
-  <div class="book">
-  <img src="book.png" alt="book" />
+  <div class="book" id=${key}>
+  <img src="book.png" alt="book"/>
   <div class="book-text">
     <div class="name">${myLibrary[key].title}</div>
     <div class="author">${myLibrary[key].author}</div>
@@ -52,7 +57,25 @@ function createBook(key) {
   );
 }
 
- 
+
+document.addEventListener("click", function(e){
+  const target = e.target.closest(".material-symbols-outlined"); 
+  if(target){
+    myLibrary.splice((e.target.closest('.book').id), 1);
+  }
+});
+
+/* deleteButton.forEach(deleteButton => {
+  
+  deleteButton.addEventListener('click', (e) => {
+    console.log(e.target.closest('.book').id); */
+/*     let y = x.toString();
+    let parentDiv = document.getElementById(y);
+    return remove(parentDiv); */
+/*   });
+}); */
+
+
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -80,3 +103,8 @@ form.addEventListener("submit", (e) => {
   })
 
 
+  function renderBooks() {
+    myLibrary.map((book, index) => {
+      console.log(book,index);
+    });
+  }
