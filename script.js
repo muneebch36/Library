@@ -21,7 +21,7 @@ class Book {
     }
 }
 
-defaultToggle.onclick = function () { //defualt book toggle function to avoid myLibrary object errors
+defaultToggle.onclick = function () { //defualt book toggle function to avoid myLibrary object errors/*  */
   if (defaultToggle.innerText.includes(")")) {
     defaultToggle.innerText = "Me No Like :("
   } else {
