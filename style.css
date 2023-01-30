@@ -17,7 +17,7 @@ body {
   --bg-color: rgb(0, 72, 151);
 }
 
-button {
+.add-button {
   background-color: #08368d;
   border: none;
   color: white;
@@ -135,7 +135,7 @@ form {
   padding-left: 35px;
 }
 
-.book-text {
+.book-cover {
   display: flex;
   flex-direction: column;
   color: white;
@@ -150,12 +150,27 @@ img {
 
 .book-status {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 180px;
+  width: 250px;
 }
 
 .book-status > :nth-child(2) {
   cursor: pointer;
+}
+
+.toggle,
+.toggle-default {
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 0px 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5%;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
 }
 
 .book-status > :nth-child(1) {
